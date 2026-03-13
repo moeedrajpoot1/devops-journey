@@ -6,7 +6,7 @@
 # Tasks: Percentage, Area, BMI, Calculator
 # =============================
 
-# ---------- Functions ----------
+
 
 percentage() {
     echo "===== Percentage Calculator ====="
@@ -31,16 +31,16 @@ bmi() {
     read -p "Enter weight in kg: " WEIGHT
     read -p "Enter height in meters: " HEIGHT
     BMI=$(echo "scale=2; $WEIGHT / ($HEIGHT * $HEIGHT)" | bc)
-    echo "BMI: $BMI"
+    echo "BMI Is >>: $BMI"
 
     if (( $(echo "$BMI < 18.5" | bc -l) )); then
-        echo "Category: Underweight"
+        echo "You are Underweight"
     elif (( $(echo "$BMI >= 18.5 && $BMI < 25" | bc -l) )); then
-        echo "Category: Normal Weight"
+        echo "Normal Weight"
     elif (( $(echo "$BMI >= 25 && $BMI < 30" | bc -l) )); then
-        echo "Category: Overweight"
+        echo "You are Overweight"
     else
-        echo "Category: Obese"
+        echo "Error "
     fi
     echo
 }
