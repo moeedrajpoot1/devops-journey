@@ -2,7 +2,6 @@
 
 # =============================
 # DevOps Assignment
-# Name: Muhammad Moeed
 # Tasks: Percentage, Area, BMI, Calculator
 # =============================
 
